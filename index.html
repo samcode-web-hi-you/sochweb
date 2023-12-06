@@ -7,11 +7,10 @@
   <title>SOCH PARIWARTAN NEPAL</title>
   <link rel="icon" href="image/logo.jpg" type="image">
   <link rel="stylesheet" href="style.css">
-  <!-- Include Tailwind CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Add the following CSS */
-    .header-nav-link {
+      .header-nav-link {
       position: relative;
       
       text-decoration: none;
@@ -402,7 +401,7 @@ h2.program-title:hover{
             Learn More
           </a>
           <a class="inline-flex items-center mt-4">
-            <img alt="testimonial" src="https://dummyimage.com/106x106" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+            <img alt="testimonial" src="image/asofspn.jpg" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
             <span class="flex-grow flex flex-col pl-4">
               <span class="title-font font-medium text-gray-900">Holden Caulfield</span>
               <span class="text-gray-500 text-sm">UI DEVELOPER</span>
@@ -420,7 +419,7 @@ h2.program-title:hover{
                 Learn More
             </a>
             <a class="inline-flex items-center mt-4">
-                <img alt="testimonial" src="https://dummyimage.com/107x107" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
+                <img alt="testimonial" src="image/ceo.jpg" class="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center">
                 <span class="flex-grow flex flex-col pl-4">
                     <span class="title-font font-medium text-gray-900">Alper Kamu</span>
                     <span class="text-gray-500 text-sm">DESIGNER</span>
@@ -432,10 +431,13 @@ h2.program-title:hover{
 </section>
 
 <!--gallery Section-->
+<div class="program-container mt-10 blog-card border-2 border-black border-opacity-80 rounded-lg overflow-hidden">
+  <h2 class="program-title header-nav-link  transition-all duration-300 ease-in-out transform hover:scale-103"><a href="aboutus.html">Reviews</a></h2>
+</div>
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-0 mx-auto">
     <div class="flex flex-col text-center w-full mb-20">
-      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Master Cleanse Reliac Heirloom</h1>
+     
       <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
     </div>
     <div class="flex flex-wrap -m-4 text-center">
@@ -478,6 +480,27 @@ h2.program-title:hover{
           <h2 class="title-font font-medium text-3xl text-gray-900">46</h2>
           <p class="leading-relaxed">Places</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Rating section -->
+<section class="text-gray-600 body-font">
+  <div class="container mx-auto">
+    <div class="flex flex-wrap justify-center">
+      <div class="w-full md:w-2/3 text-center">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fa-regular fa-star"></i>
+       
+        <p class="text-lg mb-4">Thank you for your feedback!</p>
+        <!-- Feedback form -->
+        <form>
+          <textarea class="w-full h-32 px-4 border-2 border-blue-300 rounded-md focus:outline-none focus:border-blue-500 focus:scale-105 mb-4" placeholder="Write your feedback here..."></textarea>
+          <button type="submit" class="inline-flex items-center bg-blue-500 text-white rounded p-2 hover:bg-blue-600 transition">Submit Feedback</button>
+        </form>
       </div>
     </div>
   </div>
