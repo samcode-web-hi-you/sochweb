@@ -8,220 +8,24 @@
   <link rel="icon" href="image/logo.jpg" type="image">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-      .header-nav-link {
-      position: relative;
-      
-      text-decoration: none;
-      transition: border-bottom 0.3s ease;
-    }
-
-    .header-nav-link::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px; /* Adjust this value for the thickness of the underline */
-      bottom: 0;
-      background-color: #3490dc; /* Change this color to the desired underline color */
-      transition: width 0.3s ease;
-      overflow: hidden;
-    }
-
-    .header-nav-link:hover::after {
-      width: 100%; /* Change from width: 100% to width: 0 */
-  left: 0%;
  
-    }
- .program-container {
-  text-align: center;
-  padding-top:5px;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
- 
-  position: relative;
-  overflow: hidden;
-  margin-right:70px;
-  margin-left: 70px;
-  
-}
-
-.program-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background:  #fc6f03;
-  opacity:0.68; /* Adjust the opacity to control the shine effect */
-  pointer-events: none; /* Allow interaction with elements behind the pseudo-element */
-  z-index: -1; /* Behind the content */
-  
-}
-/* .program-container:hover {
-  
-  
-  opacity: 0.8; 
-  
-} */
-
-h2.program-title {
-  color: rgb(0, 110, 255);
-  text-decoration: none;
-  display: inline-block;
-  font-size: 1.4rem;
-  padding: 5px;
-  margin: 0;
-  font-weight: 600;
-  
-  /* Remove default margin */
-}
-/* 
-h2.program-title:hover{
- 
-  opacity: .8;
-} */
-
-  .blog-card {
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-
-  .blog-card:hover {
-    transform: translateY(-5px); /* Adjust the vertical displacement on hover */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow properties */
-  }
-
-/* rating css for star*/
-.rating-container {
-            display: inline-block;
-            position: relative;
-            transition: transform 0.2s;
-            margin-bottom: 5px;
-        }
-
-        .star {
-            color:orangered ;
-            cursor: pointer;
-            position: relative;
-            
-            z-index: 1;
-            margin-right: 5px; 
-            padding: 5px;
-          
-            transition: transform 0.2s, color 0.2s;
-        }
-        
-        
-        .star::before {
-    content: '\f005';
-    position: absolute;
-    background: #d9f1f2;
-    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
-    right: 0;
-    left: 0;
-    bottom: 0;
-    top: 100%;
-    transition: all 0.3s;
-    z-index: -1;
-}
-        .star:hover {
-            transform: scale(1.2);
-            color: orange;
-        }
-
-        .rating-feedback {
-            margin-top: 10px;
-        }
-        .celebration-message {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: rgba(255, 255, 255, 0.8);
-        padding: 20px;
-        text-align: center;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        display: none;
-        z-index: 3;
-    }
-
-    .blur-background {
-        filter: blur(5px);
-        transition: filter 0.3s;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, 0.8);
-        z-index: 2;
-        display: none;
-    }
-
-    .close-button {
-        cursor: pointer;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 20px;
-        color: #333;
-    }
-    .underline-on-hover {
-    position: relative;
-    text-decoration: none;
-  }
-
-  .underline-on-hover::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: white;
-    transform-origin: bottom right;
-    transform: scaleX(0);
-    transition: transform 0.3s ease-out;
-  }
-
-  
-
-  .scale-up-on-hover:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease-out;
-  }
-
-  .transist {
-    transition: background-color 0.5s ease;
-  }
-
-  .transist:hover {
-    background-color: #33c7cc;
-  } 
-  
-  .color-in-hover{
-    color: hsl(from color h s l);
-  }
-  </style>
 </head>
 
-<body>
+<body class="bg-grey">
 <!-- Header for website -->
   <header class="text-black-900 bg-orange-300 body-font">
-    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <div class="container mx-auto flex flex-wrap p-5 md:flex-row items-center">
       <a href="#" class="flex title-font font-medium items-center text-blue-600 mb-4 md:mb-0 ">
         <img src="image/logo-fotor-20231125235651-removebg-preview.png" fill="none" stroke="currentColor"
           stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-9 h-9 text-white p-2 bg-white rounded-full"
           viewBox="0 0 24 24" alt="Logo">
-        <span class="ml-3 text-xl transition-all duration-300 ease-in-out transform hover:scale-105">SOCH PARIWARTAN NEPAL</span>
+        <span class="ml-3 text-xl transition-all duration-300 ease-in-out font-bold transform hover:scale-105">SOCH PARIWARTAN NEPAL</span>
       </a>
       <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a href="#" class="mr-5 hover:text-blue-500 header-nav-link transition-all duration-300 ease-in-out transform hover:scale-102">ABOUT US</a>
-        <a href="PROGRAMS.HTML" class="mr-5 hover:text-blue-500 header-nav-link transition-all duration-300 ease-in-out transform ho2er:scale-102">PROGRAMS</a>
-        <a href="#" class="mr-5 hover:text-blue-500 header-nav-link transition-all duration-300 ease-in-out transform hover:scale-102">DONATION</a>
-        <a href="#" class="mr-5 hover:text-blue-500 header-nav-link transition-all duration-300 ease-in-out transform hover:scale-102">CONTACT</a>
+        <a href="aboutus.html" class="mr-5 font-bold hover:text-blue-500 header-nav-link transition-all duration-300 ease-in-out transform hover:scale-102">ABOUT US</a>
+        <a href="PROGRAMS.HTML" class="mr-5 font-bold hover:text-blue-500 header-nav-link transition-all duration-300 ease-in-out transform ho2er:scale-102">PROGRAMS</a>
+        <a href="#" class="mr-5 hover:text-blue-500 font-bold header-nav-link transition-all duration-300 ease-in-out transform hover:scale-102">DONATION</a>
+        <a href="#" class="mr-5 hover:text-blue-500 font-bold header-nav-link transition-all duration-300 ease-in-out transform hover:scale-102">CONTACT</a>
       </nav>
       <button
         class="inline-flex items-center bg-blue-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-700 hover:text-white rounded text-base mt-4 md:mt-0 transition-all duration-300 ease-in-out transform hover:scale-102">JOIN
@@ -255,7 +59,7 @@ h2.program-title:hover{
           </div>
        </div>   
 <!-- First div taking up half width -->
-    <div class="program-container mt-10 blog-card border-2 border-black border-opacity-80 rounded-lg overflow-hidden">
+    <div class="program-container mt-5 blog-card border-2 border-black border-opacity-80 rounded-lg overflow-hidden">
       <h2 class="program-title header-nav-link  transition-all duration-300 ease-in-out transform hover:scale-103"><a href="PROGRAMS.HTML">PROGRAMS</a></h2>
     </div>
     <div class="flex flex-wrap mx-2">
@@ -383,7 +187,7 @@ h2.program-title:hover{
 </section>
 <!--oUR TEAM SECTION -->
 <div class="program-container mt-10 blog-card border-2 border-black border-opacity-80 rounded-lg overflow-hidden">
-  <h2 class="program-title header-nav-link  transition-all duration-300 ease-in-out transform hover:scale-103"><a href="PROGRAMS.HTML">OUR TEAM</a></h2>
+  <h2 class="program-title header-nav-link  transition-all duration-300 ease-in-out transform hover:scale-103"><a href="aboutus.html">OUR TEAM</a></h2>
 </div>
 <section class="text-gray-600 body-font">
   
@@ -490,7 +294,7 @@ h2.program-title:hover{
   <h2 class="program-title header-nav-link  transition-all duration-300 ease-in-out transform hover:scale-103"><a href="aboutus.html">TESTIMONIALS</a></h2>
 </div>
 <section class="text-gray-600 body-font">
-  <div class="container px-5 py-24 mx-auto">
+  <div class="container px-5 py-10 mx-auto">
    
     <div class="flex flex-wrap  -m-4">
       <div class="p-4 md:w-1/2  w-full">
@@ -534,22 +338,22 @@ h2.program-title:hover{
 
 <!--gallery Section-->
 <div class="program-container mt-10 blog-card border-2 border-black border-opacity-80 rounded-lg overflow-hidden">
-  <h2 class="program-title header-nav-link  transition-all duration-300 ease-in-out transform hover:scale-103"><a href="aboutus.html">Reviews</a></h2>
+  <h2 class="program-title header-nav-link  transition-all duration-300 ease-in-out transform hover:scale-103"><a href="aboutus.html">REVIEWS</a></h2>
 </div>
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-0 mx-auto">
-    <div class="flex flex-col text-center w-full mb-20">
+    <div class="flex flex-col text-center w-full mb-10">
 <!--Additional bot-reviews--> 
 <section class="text-gray-600 body-font">
-  <div class="container px-5 pt-5 mx-auto">
+  <div class="container  px-5 pt-5 mx-auto">
     <div class="flex flex-wrap w-full mb-0">
-      <div class="flex flex-row m-2">
+      <div class="flex flex-wrap m-2">
       <div class="xl:w-2/4 md:w-1/2 p-4">
         <div class="bg-gray-100 transist  p-6 rounded-lg">
           <img class="h-40 rounded w-full object-contain object-center mb-6" src="image/r-1.jpg" alt="content">
           <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">@samratthapa1100</h3>
           <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Samrat Thapa</h2>
-          <p class="leading-relaxed text-base">"Joining Soch Pariwartan Nepal is more than being part of a non-profit; it's a chance to make a real impact. As a member, I've seen positive change in action. Let's march together towards a better Nepal!"</p>
+          <p class="leading-relaxed  text-base">"Joining Soch Pariwartan Nepal is more than being part of a non-profit; it's a chance to make a real impact. As a member, I've seen positive change in action. Let's march together towards a better Nepal!"</p>
         </div>
       </div>
       <div class="xl:w-2/4 md:w-1/2 p-4">
@@ -761,6 +565,8 @@ h2.program-title:hover{
     </div>
   </div>
 </footer>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="practise.js"></script>
   <script>
 //1. List of image URLs to cycle through
     const imageUrls = [
