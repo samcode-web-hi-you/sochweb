@@ -128,14 +128,14 @@
 //window.document => shows all Methods And Features Of Selected Document(HTML)
 
 //For Accessing Document By ID ==> 
-//let heading = document.getElementById|("idName");
+//let heading = document.getElementById|("#idName");
 //Console.Log(heading);
 //Console.dir(Heading); ==>   If Id name element Doesn't Exists In Code Or Html Then On Console Window "Null" Will Be Printed;
 
 
 
 //For Accessing Document By Class Name ==>
-// let Heading = document.getElementsByClassName("Class Name");
+// let Heading = document.getElementsByClassName(".Class Name");
 // console.dir(Heading); ==> If Class name element Doesn't Exists In Code Or Html Then On Console Window "Html collection [0]" Will Be Printed;
 
 
@@ -200,7 +200,7 @@
 // ChangeableStyle.innerText = "New Value" ==> i.e (Rose is Red (old Vlaue) Should Be Changed To Sky Is Blue If New Value Is "Sky Is Blue");
 
 
-//INSERTING ELEMENTS THROUGH JAVASCRIPT
+//INSERTING ELEMENTS IN HTML THROUGH JAVASCRIPT===>
 
 
 // For Example Of Button To Create A Element;
@@ -208,6 +208,97 @@
 // NewButton.innerText = "Click Me !";
 // console.log("NewButton");
 
-// For Making It Visiable In Window screen;
+// [For Making It Visiable In Window screen;
 // let node(div,button,section,anchor,strong...etc) = document.querySelector("div,button,section,anchor,strong...etc");
-// node(div,button,section,anchor,strong...etc).append(NewButton);  ===> [Inside Selected Div Or Node But At End] <===
+
+// ===> [Inside Selected Node But At End] <===
+// node(div,button,section,anchor,strong...etc).append(NewButton);
+
+// ===> [Inside Selected Node But At Start] <===
+// node(div,button,section,anchor,strong...etc).prepend(NewButton);
+
+// ===> [Outside Selected Node But At Start] <===
+// node(div,button,section,anchor,strong...etc).before(NewButton);
+
+// ===> [Outside Selected Node But At End] <===
+// node(div,button,section,anchor,strong...etc).after(NewButton);]; <====
+
+
+// DELETING ELEMENTS IN HTML THROUGH JAVASRIPT ======>
+// let node(div,button,section,anchor,strong...etc) = document.querySelector("div,button,section,anchor,strong...etc");
+// node(div,button,section,anchor,strong...etc) or Any Variable Holding wanted Element = document.remove("button"); <=====
+
+//CREATED A NEW BUTTON WITH STYLE AND PREPENDED IT TO BODY ====>
+// let newButton = document.createElement("button");
+// newButton.innerText = "Click Me!";
+// newButton.style.backgroundColor = "red";
+// newButton.style.color = "white";
+// document.querySelector("body").prepend(newButton);<======
+
+//CREATED A NEW CLASS IN CSS AND ADDED IT TO INCLUDED CLASS BY USING classList.add====>
+// let p = document.querySelector("p");
+// p.classList.add("NewContent");<======
+
+
+
+//<====== EVENTS IN JAVASCRIPT ======>
+//              ↓↓↓↓↓↓↓↓↓
+
+
+// Events are fired to notify code of "interesting changes" that may affect code execution. 
+// These can arise from user interactions such as using a mouse or resizing a window, 
+// changes in the state of the underlying environment 
+// (e.g. low battery or media events from the operating system), and other causes.
+
+
+// [Most Popular Events Are]↓
+
+//Mouse event (Hover,click,Doubleclick....etc)
+//Keyboard event (keypress, Keyhold, Keyup, Keydown....etc)
+//Form Events (Submit etc)
+//Print Events & Many More Can Be Access Through (MDN EVENT REFERENCE)↑
+
+
+//WAY OF HANDALING EVENTS IN JAVASCRIPT ↓↓
+
+// let clickme = document.querySelector(".clickme");//{.classname or #id or (Anchor, Body, Button)tag}
+//  clickme.onclick = () => {
+//     console.log("I am Clicked");
+//     alert("Lonely Man");
+// }
+
+// let hover = document.querySelector("div");
+// let lone = document.querySelector(".lome")
+// hover.onmouseover = () => {
+//     lone.style.backgroundColor = "black";
+//     alert ("DANGER, Remove Your Mouse Pointer Or It will Hack Your Computer");
+//     hover.style.backgroundColor = "white";  
+// }
+
+//Event Object In event Handler ====>
+
+// let some = document.querySelector("div")
+// //evt Is a Event Object Which Stores All the Method and Properties Of Event
+// some.onclick = (evt) => { 
+//     console.log(evt);
+// //print type Of event (clock, dopubleclick,Hover..etc)↓↓
+//     console.log(evt.type);
+// //Print Clicked Area On selected Document By X-axis And Y-axis ↓↓
+//     console.log(evt.clientX,evt.clientY);
+// //Print The target Html Line, In this Block Of Code ("div") Is Targeted 
+// //So {<div class="Box"></div>} Will Be Printed ↓↓
+//     console.log(evt.target);
+
+// } <====
+
+//Types Of Handling Events===>
+//1) In-line Handling 
+//(Drawback: It will make Code Bulki and IF File vAriable Matched with Inline Then File Variable Or Function Will Run By Discarding In-line Ahndling or function)
+//2) Throgh JS Function node.event = () =>{ }
+//(Drawback: only One Fuction Can Be Defined)
+//3) Event Listners <====
+
+
+//EVENTS lISTENERS ====>
+//node.addEventListener(event(eg:click,doubleclick..etc), Callback(eg:Function));{==>ToAdd<==}
+//node.removeEventListener(event(eg:click,doubleclick..etc), Callback(eg:Function));{==>ToRemove<==}
