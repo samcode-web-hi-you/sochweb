@@ -6,6 +6,6 @@
       path.resolve(__dirname, 'aboutus.html'),
       path.resolve(__dirname, 'programs.html')
     ],
-    // other configurations...
+    
   };
   
