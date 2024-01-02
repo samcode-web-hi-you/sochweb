@@ -303,5 +303,26 @@
 //node.addEventListener(event(eg:click,doubleclick..etc), Callback(eg:Function));{==>ToAdd<==}
 //node.removeEventListener(event(eg:click,doubleclick..etc), Callback(eg:Function));{==>ToRemove<==}
 
+//Simple Program To toggle
+//Assuming Two Id dark-mode and light-mode
+// const darkMode = document.querySelector ("#dark-mode");
+// const lightMode = document.querySelector("#light-mode");
+// const toggle = document.querySelector("body");
+// let currMode = darkMode;
 
+//  darkMode.addEventListener("click",() =>{
+//     if  (currMode === darkmode) {
+//             currMode=lightMode
+            
+//             toggle.style.background="black"
+//     }
+//     else{
+//         currMode=darkMode
+//   }
+//   console.log(currMode);
+// });
 
+// lightMode.addEventListener("click",() =>{
+//   console.log("I am LightMode");
+// toggle.style.background="White"
+// });
