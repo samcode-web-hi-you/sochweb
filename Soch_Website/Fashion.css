@@ -1343,3 +1343,14 @@
   border: none;
   cursor: pointer;
 }
+
+.hide{
+  display: none;
+}
+.bi5{
+  border: 2px solid rgb(99 102 241);
+  z-index: 1;
+}
+.part2, .part3{
+  cursor: pointer;
+}

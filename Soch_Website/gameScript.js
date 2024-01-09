@@ -7,6 +7,7 @@ let firstStyle=document.querySelector(".style1");
 let secondStyle=document.querySelector(".style2");
 let rps=document.querySelector(".ScissorPaper");
 
+
 //Function To Add class In Element If Element Have ClassList
 const addClass=(element)=>{
     if(element && element.classList){
