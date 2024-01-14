@@ -1,14 +1,74 @@
+
+
+function checkScreenWidth() {
+  let  screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  let  Element = document.querySelector(".Screen600px");
+  let ElementSecond = document.querySelector('.less600Px');
+  if (screenWidth > 500) {
+    Element.classList.remove('hide');
+    ElementSecond.classList.add('hide');
+  } else {
+   Element.classList.add('hide');
+   ElementSecond.classList.remove('hide');
+  }
+};
+function fontAdjustment() {
+  try {
+    let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    let changeFonts = document.querySelectorAll(".fontChange");
+    changeFonts.forEach(function (element) {
+      if (screenWidth > 900 || screenWidth < 500) {
+        element.classList.add("font-bold");
+        element.classList.remove("font-medium");
+      } else {
+        element.classList.remove("font-bold");
+        element.classList.add("font-medium");
+      }
+    });
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+checkScreenWidth();
+window.addEventListener('resize', checkScreenWidth);
+fontAdjustment();
+window.addEventListener('resize', fontAdjustment);
+
+
+
+window.addEventListener('DOMContentLoaded', function () {
+  let smallScreenNav = document.querySelector('#navbar-lineBreaker');
+  let navBarContent = document.querySelector(".navBar-content");
+
+  if (smallScreenNav) {
+      smallScreenNav.addEventListener("click", function () {
+          // Toggle the "navLine" class on each click
+          navBarContent.classList.toggle("navLine");
+          navBarContent.classList.toggle("hide");
+          console.log("clicked")
+      });
+  } else {
+      console.error('Element with ID "navbar-lineBreaker" not found.');
+  }
+});
 const darkMode = document.querySelector("#dark-mode");
 const lightMode = document.querySelector("#light-mode");
-const toggle = document.querySelector(".dropping");
+const togglers = document.querySelector(".dropping");
 
-darkMode.addEventListener("click", () => {
-    toggle.style.background = "black"; toggle.style.color="white";
-});
+try{darkMode.addEventListener("click", () => {
+    togglers.style.background = "black"; togglers.style.color="white";
+})}catch(err){
+      console.log
+      (err)
+};
 
-lightMode.addEventListener("click", () => {
-    toggle.style.background = "white"; toggle.style.color="black";
-});
+try{lightMode.addEventListener("click", () => {
+    togglers.style.background = "white"; togglers.style.color="black";
+})}catch(err){
+  console.log
+  (err)
+};
 
 
 
