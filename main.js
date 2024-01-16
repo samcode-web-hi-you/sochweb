@@ -1,16 +1,21 @@
-
+document.addEventListener("DOMContentLoaded", function() {
 
 function checkScreenWidth() {
   let  screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
   let  Element = document.querySelector(".Screen600px");
   let ElementSecond = document.querySelector('.less600Px');
+  let adjustedText=document.querySelector("#LogoName");
   if (screenWidth > 500) {
     Element.classList.remove('hide');
+    adjustedText.classList.remove("font-medium");
+    adjustedText.classList.add("font-bold");
     ElementSecond.classList.add('hide');
   } else {
-   Element.classList.add('hide');
-   ElementSecond.classList.remove('hide');
-  }
+    adjustedText.classList.remove("font-bold");
+    ElementSecond.classList.remove('hide');
+    adjustedText.classList.add("font-medium");
+    Element.classList.add('hide');
+  };
 };
 function fontAdjustment() {
   try {
@@ -27,8 +32,8 @@ function fontAdjustment() {
     });
   } catch (err) {
     console.log(err);
-  }
-}
+  };
+};
 
 checkScreenWidth();
 window.addEventListener('resize', checkScreenWidth);
@@ -40,18 +45,29 @@ window.addEventListener('resize', fontAdjustment);
 window.addEventListener('DOMContentLoaded', function () {
   let smallScreenNav = document.querySelector('#navbar-lineBreaker');
   let navBarContent = document.querySelector(".navBar-content");
-
+  let InvalidClick =document.querySelector('#invalidClick');
   if (smallScreenNav) {
       smallScreenNav.addEventListener("click", function () {
           // Toggle the "navLine" class on each click
           navBarContent.classList.toggle("navLine");
           navBarContent.classList.toggle("hide");
-          console.log("clicked")
+          smallScreenNav.classList.toggle("hide");
+          console.log("clicked");
       });
-  } else {
+  } else{
+    
       console.error('Element with ID "navbar-lineBreaker" not found.');
-  }
+    };
+   if(InvalidClick)
+   {InvalidClick.addEventListener('click',function(){
+      navBarContent.classList.toggle("navLine");
+      navBarContent.classList.toggle("hide");
+      smallScreenNav.classList.toggle("hide")
+    })}else{
+      console.log("fail");
+   };
 });
+
 const darkMode = document.querySelector("#dark-mode");
 const lightMode = document.querySelector("#light-mode");
 const togglers = document.querySelector(".dropping");
@@ -68,12 +84,9 @@ try{lightMode.addEventListener("click", () => {
 })}catch(err){
   console.log
   (err)
-};
-
-
-
-
+}});
 //Language
+
 document.addEventListener('DOMContentLoaded', function() {
   const translations = {
     Eng: {
@@ -95,13 +108,34 @@ document.addEventListener('DOMContentLoaded', function() {
     if (translations[lang]) {
       languageBtn.innerText = translations[lang].button1;
       modeBtn.innerText = translations [lang].button2;
-    }
-  }
+    };
+  };
 
   // Event listeners for language selection
   document.getElementById('Eng').addEventListener('click', () => changeLanguage('Eng'));
   document.getElementById('Nep').addEventListener('click', () => changeLanguage('Nep'));
+
 });
+const darkModes = document.querySelector("#dark-mode");
+const lightModes = document.querySelector("#light-mode");
+const toggler = document.querySelector(".ColorChange");
+
+try{darkModes.addEventListener("click", () => {
+    toggler.style.background = "black"; toggler.style.color="white";
+})}catch(err){
+      console.log
+      (err)
+};
+
+try{lightModes.addEventListener("click", () => {
+    toggler.style.background = "white"; toggler.style.color="black";
+})}catch(err){
+  console.log
+  (err)
+};
+
+
+
 
 
 

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming Events</title>
+    <link rel="icon" href="image/logo.jpg" type="image">
+    <link rel="stylesheet" href="Fashion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="">
+    <link rel="stylesheet" href="output.css">
+    <style>
+        /* Apply the following styles to the image */
+        #image {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        /* Apply the following styles to the container */
+        .image-container {
+            height: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 8px;
+        }
+
+        .image-container:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            transform: scale(1);
+            transform: translateY(-1%);
+        }
+
+        /* Additional styles for navigation buttons */
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-10%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            transition: transform 0.6s ease, box-shadow 0.8s ease;
+            z-index: 1;
+        }
+
+        .nav-button-left {
+            left: 10px;
+        }
+
+        .nav-button-right {
+            right: 10px;
+        }
+
+        /* Add hover effect */
+        .nav-button:hover {
+            transform: scale(1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="ColorChange">
+    <div class="dropping w-full h-full bg-grey text-black">
+        <div class="dropdown">
+            <button id="modeBtn" class="dropbtn">Mode</button>
+            <div class="dropdown-content">
+                <a id="dark-mode" class="text-blue-500">Dark</a>
+                <a id="light-mode" class="text-blue-500">Light</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button id="languageBtn" class="dropbtn">Language</button>
+            <div class="dropdown-content">
+                <a id="Eng" class="text-blue-500">English</a>
+                <a id="Nep" class="text-blue-500">Nepali</a>
+            </div>
+        </div>
+    </div>
+
+    <header class="text-black-900  bg-orange-300 body-font flex p-5 items-center justify-between">
+        <div class="md:program-container Screen600px mx-auto ">
+            <a href="main.html" class="flex title-font font-medium items-center text-blue-600">
+                <img src="image\logo-fotor-20231125235651-removebg-preview.png" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-9 h-9 text-white p-2 bg-white rounded-full" viewBox="0 0 24 24" alt="Logo">
+                <span
+                    class="ml-3 text-xl transition-all duration-300 ease-in-out font-bold transform hover:scale-105">SOCH
+                    PARIWARTAN NEPAL</span>
+            </a>
+        </div>
+
+
+        <div class="navBar navDropping bg-orange-300 less600Px">
+            <img src="image\logo-fotor-20231125235651-removebg-preview.png" fill="none" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-9 h-9 text-white p-2 bg-white rounded-full" viewBox="0 0 24 24" alt="Logo">
+            <a href="#" id="LogoName"
+                class="navbar-brand navBar ml-3 text-xl transition-all duration-300 ease-in-out font-bold transform hover:scale-105 text-blue-600">SOCH
+                PARIWARTAN NEPAL</a>
+            <button class="navbar-toggler navDropBtn" id="navbar-lineBreaker"><i class="fa-solid fa-bars"></i></button>
+            <ul class="navbar-menu hide navBar-content" id="navbar-menu">
+                <li class="navbar-item"><a href="main.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="aboutus.html" class="navbar-link">About</a></li>
+                <li class="navbar-item"><a href="programs.html" class="navbar-link">Services</a></li>
+                <li class="navbar-item"><a href="ourteam.html" class="navbar-link">Contact</a></li>
+            </ul>
+
+        </div>
+    </header>
+    <section id="invalidClick" class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap -m-4">
+                <div class="p-4 lg:w-1/3">
+                    <div
+                        class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">First Program</h2>
+                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">2080/10/10</h1>
+                        <p class="leading-relaxed mb-3">Program Will Be Happening In Poush 10 Saturday From Madan
+                            Bhandari Park To Golaghat</p>
+                        <a class="text-indigo-500 inline-flex items-center">Learn More
+                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                        <div
+                            class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                            <span
+                                class="text-gray-900 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>102K
+                            </span>
+                            <span class="text-gray-900 inline-flex items-center leading-none text-sm">
+                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                    </path>
+                                </svg>656
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/3">
+                    <div
+                        class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Second Program
+                        </h2>
+                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">2080/10/14</h1>
+                        <p class="leading-relaxed mb-3">Program Will Be Happening In Poush 14 Saturday For A Soch Annual
+                            Meeting</p>
+                        <a class="text-indigo-500 inline-flex items-center">Learn More
+                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                        <div
+                            class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                            <span
+                                class="text-gray-900 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>249k
+                            </span>
+                            <span class="text-gray-900 inline-flex items-center leading-none text-sm">
+                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                    </path>
+                                </svg>798
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/3">
+                    <div
+                        class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
+                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">Third Program</h2>
+                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">2080/10/25</h1>
+                        <p class="leading-relaxed mb-3">Program Is Entitled We Will Update You soon</p>
+                        <a class="text-indigo-500 inline-flex items-center">Learn More
+                            <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
+                                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
+                        <div
+                            class="text-center mt-2 leading-none flex justify-center absolute bottom-0 left-0 w-full py-4">
+                            <span
+                                class="text-gray-900 mr-3 inline-flex items-center leading-none text-sm pr-3 py-1 border-r-2 border-gray-200">
+                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>70K
+                            </span>
+                            <span class="text-gray-900 inline-flex items-center leading-none text-sm">
+                                <svg class="w-4 h-4 mr-1" stroke="currentColor" stroke-width="2" fill="none"
+                                    stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                                    <path
+                                        d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                    </path>
+                                </svg>100
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>

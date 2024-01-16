@@ -11,6 +11,7 @@ module.exports = {
     './ourteam.html',
     './moremembers.html',
     './donation.html',
+    './event.html',
   ],
   purge: [
     './index.html',
@@ -20,6 +21,7 @@ module.exports = {
     './ourteam.html',
     './moremembers.html',
     './donation.html',
+    './event.html',
   ],
   theme: {
     extend: {},
