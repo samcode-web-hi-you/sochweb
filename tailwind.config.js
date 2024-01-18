@@ -2,7 +2,7 @@
 // tailwind.config.js
 
 module.exports = {
- 
+
   content: [
     './index.html',
     './style.css',
@@ -12,6 +12,7 @@ module.exports = {
     './moremembers.html',
     './donation.html',
     './event.html',
+    './contact.html',
   ],
   purge: [
     './index.html',
@@ -22,6 +23,7 @@ module.exports = {
     './moremembers.html',
     './donation.html',
     './event.html',
+    './contact.html',
   ],
   theme: {
     extend: {},

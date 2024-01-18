@@ -73,7 +73,7 @@
   }
   
   .nav-search:hover{
-    border: 2px solid orange;
+    border: 2px solid #ffa500;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -1386,4 +1386,9 @@
       color: #fff;
       background: none;
       border: none;
+}
+.fa-solid{
+  color: #00f;
+  padding: 5px;
+  margin-right: 5px;
 }

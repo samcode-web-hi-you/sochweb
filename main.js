@@ -1,137 +1,123 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 
-function checkScreenWidth() {
-  let  screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  let  Element = document.querySelector(".Screen600px");
-  let ElementSecond = document.querySelector('.less600Px');
-  let adjustedText=document.querySelector("#LogoName");
-  if (screenWidth > 500) {
-    Element.classList.remove('hide');
-    adjustedText.classList.remove("font-medium");
-    adjustedText.classList.add("font-bold");
-    ElementSecond.classList.add('hide');
-  } else {
-    adjustedText.classList.remove("font-bold");
-    ElementSecond.classList.remove('hide');
-    adjustedText.classList.add("font-medium");
-    Element.classList.add('hide');
-  };
-};
-function fontAdjustment() {
-  try {
+  function checkScreenWidth() {
     let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    let changeFonts = document.querySelectorAll(".fontChange");
-    changeFonts.forEach(function (element) {
-      if (screenWidth > 900 || screenWidth < 500) {
-        element.classList.add("font-bold");
-        element.classList.remove("font-medium");
-      } else {
-        element.classList.remove("font-bold");
-        element.classList.add("font-medium");
-      }
-    });
-  } catch (err) {
-    console.log(err);
+    let Element = document.querySelector(".Screen600px");
+    let ElementSecond = document.querySelector('.less600Px');
+    let adjustedText = document.querySelector("#LogoName");
+    if (screenWidth > 500 && screenWidth > 760) {
+      Element.classList.remove('hide');
+      adjustedText.classList.remove("font-medium");
+      adjustedText.classList.add("font-bold");
+      ElementSecond.classList.add('hide');
+    } else {
+      adjustedText.classList.remove("font-bold");
+      ElementSecond.classList.remove('hide');
+      adjustedText.classList.add("font-medium");
+      Element.classList.add('hide');
+    };
   };
-};
-
-checkScreenWidth();
-window.addEventListener('resize', checkScreenWidth);
-fontAdjustment();
-window.addEventListener('resize', fontAdjustment);
-
-
-
-window.addEventListener('DOMContentLoaded', function () {
-  let smallScreenNav = document.querySelector('#navbar-lineBreaker');
-  let navBarContent = document.querySelector(".navBar-content");
-  let InvalidClick =document.querySelector('#invalidClick');
-  if (smallScreenNav) {
-      smallScreenNav.addEventListener("click", function () {
-          // Toggle the "navLine" class on each click
-          navBarContent.classList.toggle("navLine");
-          navBarContent.classList.toggle("hide");
-          smallScreenNav.classList.toggle("hide");
-          console.log("clicked");
+  function fontAdjustment() {
+    try {
+      let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      let changeFonts = document.querySelectorAll(".fontChange");
+      changeFonts.forEach(function (element) {
+        if (screenWidth > 900 || screenWidth < 500) {
+          element.classList.add("font-bold");
+          element.classList.remove("font-medium");
+        } else {
+          element.classList.remove("font-bold");
+          element.classList.add("font-medium");
+        }
       });
-  } else{
-    
+    } catch (err) {
+      console.log(err);
+    };
+  };
+
+  checkScreenWidth();
+  window.addEventListener('resize', checkScreenWidth);
+  fontAdjustment();
+  window.addEventListener('resize', fontAdjustment);
+
+
+
+  window.addEventListener('DOMContentLoaded', function () {
+    let smallScreenNav = document.querySelector('#navbar-lineBreaker');
+    let navBarContent = document.querySelector(".navBar-content");
+    let InvalidClick = document.querySelector('#invalidClick');
+    if (smallScreenNav) {
+      smallScreenNav.addEventListener("click", function () {
+        // Toggle the "navLine" class on each click
+        navBarContent.classList.toggle("navLine");
+        navBarContent.classList.toggle("hide");
+        smallScreenNav.classList.toggle("hide");
+        console.log("clicked");
+      });
+    } else {
+
       console.error('Element with ID "navbar-lineBreaker" not found.');
     };
-   if(InvalidClick)
-   {InvalidClick.addEventListener('click',function(){
-      navBarContent.classList.toggle("navLine");
-      navBarContent.classList.toggle("hide");
-      smallScreenNav.classList.toggle("hide")
-    })}else{
+    if (InvalidClick) {
+      InvalidClick.addEventListener('click', function () {
+        navBarContent.classList.toggle("navLine");
+        navBarContent.classList.toggle("hide");
+        smallScreenNav.classList.toggle("hide")
+      })
+    } else {
       console.log("fail");
-   };
-});
+    };
+  });
 
-const darkMode = document.querySelector("#dark-mode");
-const lightMode = document.querySelector("#light-mode");
-const togglers = document.querySelector(".dropping");
+  const darkMode = document.querySelector("#dark-mode");
+  const lightMode = document.querySelector("#light-mode");
+  const togglers = document.querySelector(".dropping");
 
-try{darkMode.addEventListener("click", () => {
-    togglers.style.background = "black"; togglers.style.color="white";
-})}catch(err){
-      console.log
+  try {
+    darkMode.addEventListener("click", () => {
+      togglers.style.background = "#303030"; togglers.style.color = "white";
+    })
+  } catch (err) {
+    console.log
       (err)
-};
+  };
 
-try{lightMode.addEventListener("click", () => {
-    togglers.style.background = "white"; togglers.style.color="black";
-})}catch(err){
-  console.log
-  (err)
-}});
+  try {
+    lightMode.addEventListener("click", () => {
+      togglers.style.background = "white"; togglers.style.color = "#303030";
+    })
+  } catch (err) {
+    console.log
+      (err)
+  }
+});
 //Language
 
-document.addEventListener('DOMContentLoaded', function() {
-  const translations = {
-    Eng: {
-      button1: 'Language',
-      button2:'Mode'
 
-    },
-    Nep: {
-      button1: 'भाषा',
-      button2:'मोड'
-    }
-  };
-
-  // Function to change language
-  function changeLanguage(lang) {
-    const languageBtn = document.getElementById('languageBtn');
-    const modeBtn = document.getElementById("modeBtn");
-
-    if (translations[lang]) {
-      languageBtn.innerText = translations[lang].button1;
-      modeBtn.innerText = translations [lang].button2;
-    };
-  };
-
-  // Event listeners for language selection
-  document.getElementById('Eng').addEventListener('click', () => changeLanguage('Eng'));
-  document.getElementById('Nep').addEventListener('click', () => changeLanguage('Nep'));
-
-});
 const darkModes = document.querySelector("#dark-mode");
 const lightModes = document.querySelector("#light-mode");
 const toggler = document.querySelector(".ColorChange");
+const navAdjustment = document.querySelector(".DarkMode")
 
-try{darkModes.addEventListener("click", () => {
-    toggler.style.background = "black"; toggler.style.color="white";
-})}catch(err){
-      console.log
-      (err)
+try {
+  darkModes.addEventListener("click", () => {
+    toggler.style.background = "#303030"; toggler.style.color = "white";
+    navAdjustment.classList.remove("bg-orange-300");
+
+  })
+} catch (err) {
+  console.log
+    (err)
 };
 
-try{lightModes.addEventListener("click", () => {
-    toggler.style.background = "white"; toggler.style.color="black";
-})}catch(err){
+try {
+  lightModes.addEventListener("click", () => {
+    toggler.style.background = "white"; toggler.style.color = "#303030";
+    navAdjustment.classList.remove("colorChangeOnLine"); navAdjustment.classList.add("bg-orange-300");
+  });
+} catch (err) {
   console.log
-  (err)
+    (err)
 };
 
 

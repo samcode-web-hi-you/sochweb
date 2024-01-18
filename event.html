@@ -66,16 +66,16 @@
 </head>
 
 <body class="ColorChange">
-    <div class="dropping w-full h-full bg-grey text-black">
+    <div class="dropping w-full h-full bg-grey text-black m-0">
         <div class="dropdown">
-            <button id="modeBtn" class="dropbtn">Mode</button>
+            <button id="modeBtn" class="dropbtn" data-translate="button2"> Mode</button>
             <div class="dropdown-content">
                 <a id="dark-mode" class="text-blue-500">Dark</a>
                 <a id="light-mode" class="text-blue-500">Light</a>
             </div>
         </div>
         <div class="dropdown">
-            <button id="languageBtn" class="dropbtn">Language</button>
+            <button id="languageBtn" data-translate="button1" class="dropbtn">Language</button>
             <div class="dropdown-content">
                 <a id="Eng" class="text-blue-500">English</a>
                 <a id="Nep" class="text-blue-500">Nepali</a>
@@ -83,20 +83,19 @@
         </div>
     </div>
 
-    <header class="text-black-900  bg-orange-300 body-font flex p-5 items-center justify-between">
+    <header class="text-black-900  bg-orange-300 DarkMode body-font flex p-5 items-center justify-between">
         <div class="md:program-container Screen600px mx-auto ">
             <a href="main.html" class="flex title-font font-medium items-center text-blue-600">
                 <img src="image\logo-fotor-20231125235651-removebg-preview.png" fill="none" stroke="currentColor"
                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     class="w-9 h-9 text-white p-2 bg-white rounded-full" viewBox="0 0 24 24" alt="Logo">
-                <span
+                <span id="engHead" data-translate="button3"
                     class="ml-3 text-xl transition-all duration-300 ease-in-out font-bold transform hover:scale-105">SOCH
                     PARIWARTAN NEPAL</span>
             </a>
         </div>
 
-
-        <div class="navBar navDropping bg-orange-300 less600Px">
+        <div class="navBar DarkMode navDropping bg-orange-300 less600Px">
             <img src="image\logo-fotor-20231125235651-removebg-preview.png" fill="none" stroke="currentColor"
                 stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 class="w-9 h-9 text-white p-2 bg-white rounded-full" viewBox="0 0 24 24" alt="Logo">
@@ -107,23 +106,26 @@
             <ul class="navbar-menu hide navBar-content" id="navbar-menu">
                 <li class="navbar-item"><a href="main.html" class="navbar-link">Home</a></li>
                 <li class="navbar-item"><a href="aboutus.html" class="navbar-link">About</a></li>
-                <li class="navbar-item"><a href="programs.html" class="navbar-link">Services</a></li>
+                <li class="navbar-item"><a href="contact.html" class="navbar-link">Services</a></li>
                 <li class="navbar-item"><a href="ourteam.html" class="navbar-link">Contact</a></li>
             </ul>
 
         </div>
     </header>
     <section id="invalidClick" class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
+        <div class="container px-5 py-10 mx-auto">
             <div class="flex flex-wrap -m-4">
                 <div class="p-4 lg:w-1/3">
                     <div
                         class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">First Program</h2>
-                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">2080/10/10</h1>
-                        <p class="leading-relaxed mb-3">Program Will Be Happening In Poush 10 Saturday From Madan
-                            Bhandari Park To Golaghat</p>
-                        <a class="text-indigo-500 inline-flex items-center">Learn More
+                        <h2 id="langForH2" data-translate="button4"
+                            class="tracking-widest text-xs title-font font-medium program  text-gray-900 mb-1">
+                            First Program</h2>
+                        <h1 class="title-font sm:text-2xl text-xl font-medium program text-gray-900  mb-3"
+                            data-translate="button5">2080/10/10</h1>
+                        <p class="  program leading-relaxed mb-3" data-translate="button6">Program Will Be Happening In
+                            Poush 10 Saturday From Madan Bhandari Park To Golaghat</p>
+                        <a class="text-indigo-500 inline-flex items-center program " data-translate="button7">Learn More
                             <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                                 fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M5 12h14"></path>
@@ -154,12 +156,15 @@
                 <div class="p-4 lg:w-1/3">
                     <div
                         class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Second Program
+                        <h2 class="tracking-widest text-xs title-font font-medium program text-gray-900 mb-1"
+                            data-translate="button8">Second Program
                         </h2>
-                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">2080/10/14</h1>
-                        <p class="leading-relaxed mb-3">Program Will Be Happening In Poush 14 Saturday For A Soch Annual
+                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3"
+                            data-translate="button9">2080/10/14</h1>
+                        <p class="leading-relaxed mb-3" data-translate="button10">Program Will Be Happening In Poush 14
+                            Saturday For A Soch Annual
                             Meeting</p>
-                        <a class="text-indigo-500 inline-flex items-center">Learn More
+                        <a class="text-indigo-500 inline-flex items-center" data-translate="button11">Learn More
                             <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                                 fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M5 12h14"></path>
@@ -190,10 +195,13 @@
                 <div class="p-4 lg:w-1/3">
                     <div
                         class="h-full bg-gray-100 bg-opacity-75 px-8 pt-16 pb-24 rounded-lg overflow-hidden text-center relative">
-                        <h2 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">Third Program</h2>
-                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">2080/10/25</h1>
-                        <p class="leading-relaxed mb-3">Program Is Entitled We Will Update You soon</p>
-                        <a class="text-indigo-500 inline-flex items-center">Learn More
+                        <h2 class="tracking-widest text-xs title-font font-medium program text-gray-900 mb-1"
+                            data-translate="button12">Third Program</h2>
+                        <h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3"
+                            data-translate="button13">2080/10/25</h1>
+                        <p class="leading-relaxed mb-3" data-translate="button14">Program Is Not Titled We Will Update
+                            You soon</p>
+                        <a class="text-indigo-500 inline-flex items-center" data-translate="button15">Learn More
                             <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
                                 fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M5 12h14"></path>
@@ -225,6 +233,7 @@
         </div>
     </section>
     <script src="main.js"></script>
+    <script src="language.js"></script>
 </body>
 
 </html>
