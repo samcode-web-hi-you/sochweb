@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-
   function checkScreenWidth() {
     let screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
     let Element = document.querySelector(".Screen600px");
@@ -90,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log
       (err)
   }
+
 });
 //Language
 
@@ -119,8 +119,24 @@ try {
   console.log
     (err)
 };
+function returnhome() {
+  try {
+    const messages = document.getElementById('submit-messages');
+    const message = document.getElementById('submit-message');
+    const lineHead = document.getElementById("FormClass");
+    const homeNavigator = document.getElementById("homeNavigator");
+    lineHead.style.display = "none";
+    messages.classList.remove("hide");
+    message.innerText = "Thanks for Filling Form Our Team will contact you soon";
+    homeNavigator.classList.remove("hide");
+  } catch (err) {
+    console.log(err)
+  };
 
 
+}
+const submitBtn = document.getElementById('submit-btn');
+submitBtn.addEventListener("click", returnhome);
 
 
 

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="Fashion.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="">
     <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./loader/practise.css">
     <style>
         .hide {
             display: none;
@@ -17,69 +18,59 @@
 </head>
 <!--Dropdown Button For Language And Mode-->
 
-<body class="bg-grey">
-    <div id="content">
-        <div class="dropping w-full h-full bg-grey text-black">
+<body class="bg-grey ColorChange">
+    <section id="all">
+        <div class="dropping w-full h-full bg-grey text-black m-0">
             <div class="dropdown">
-                <button id="modeBtn" class="dropbtn">Mode</button>
+                <button id="modeBtn" class="dropbtn" data-translate="button2"> Mode</button>
                 <div class="dropdown-content">
                     <a id="dark-mode" class="text-blue-500">Dark</a>
                     <a id="light-mode" class="text-blue-500">Light</a>
                 </div>
             </div>
             <div class="dropdown">
-                <button id="languageBtn" class="dropbtn">Language</button>
+                <button id="languageBtn" data-translate="button1" class="dropbtn">Language</button>
                 <div class="dropdown-content">
                     <a id="Eng" class="text-blue-500">English</a>
                     <a id="Nep" class="text-blue-500">Nepali</a>
                 </div>
             </div>
         </div>
-        <div id="" class="navBar less600Px navDropping bg-orange-300">
-            <img src="image\logo-fotor-20231125235651-removebg-preview.png" fill="none" stroke="currentColor"
-                stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                class="w-9 h-9 text-white p-2 bg-white rounded-full" viewBox="0 0 24 24" alt="Logo">
-            <a href="#" id="LogoName"
-                class="navbar-brand navBar ml-3 text-xl transition-all duration-300 ease-in-out font-bold transform hover:scale-105 text-blue-600">SOCH
-                PARIWARTAN NEPAL</a>
-            <button class="navbar-toggler navDropBtn" id="navbar-lineBreaker"><i class="fa-solid fa-bars"></i></button>
-            <ul class="navbar-menu hide navBar-content" id="navbar-menu">
-                <li class="navbar-item"><a href="main.html" class="navbar-link" target="_blank">Home</a></li>
-                <li class="navbar-item"><a href="aboutus.html" class="navbar-link" target="_blank">About</a></li>
-                <li class="navbar-item"><a href="programs.html" class="navbar-link" target="_blank">Services</a></li>
-                <li class="navbar-item"><a href="ourteam.html" class="navbar-link" target="_blank">Contact</a></li>
-            </ul>
-        </div>
 
-
-        <!--Ending Of Dropdown Button For Language And Mode-->
-        <!-- Header for website -->
-        <header class="text-black-900 Screen600px  bg-orange-300 body-font">
-            <div class="container mx-auto flex flex-wrap p-5 md:flex-row items-center">
-                <a href="index.html" class="flex title-font font-medium items-center text-blue-600 mb-4 md:mb-0 ">
-                    <img src="image/logo-fotor-20231125235651-removebg-preview.png" fill="none" stroke="currentColor"
+        <header class="text-black-900  bg-orange-300 DarkMode body-font flex p-5 items-center justify-between">
+            <div class="md:program-container Screen600px mx-auto ">
+                <a href="main.html" class="flex title-font font-medium items-center text-blue-600">
+                    <img src="image\logo-fotor-20231125235651-removebg-preview.png" fill="none" stroke="currentColor"
                         stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         class="w-9 h-9 text-white p-2 bg-white rounded-full" viewBox="0 0 24 24" alt="Logo">
-                    <span
-                        class="ml-3 text-xl font-bold transition-all duration-300 ease-in-out transform hover:scale-105">SOCH
+                    <span id="engHead" data-translate="button3"
+                        class="ml-3 text-xl transition-all duration-300 ease-in-out font-bold transform hover:scale-105">SOCH
                         PARIWARTAN NEPAL</span>
                 </a>
-                <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+            </div>
 
+            <div class="navBar DarkMode navDropping bg-orange-300 less600Px">
+                <img src="image\logo-fotor-20231125235651-removebg-preview.png" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-9 h-9 text-white p-2 bg-white rounded-full" viewBox="0 0 24 24" alt="Logo">
+                <a href="#" id="LogoName"
+                    class="navbar-brand navBar ml-3 text-xl transition-all duration-300 ease-in-out font-bold transform hover:scale-105 text-blue-600">SOCH
+                    PARIWARTAN NEPAL</a>
+                <button class="navbar-toggler navDropBtn" id="navbar-lineBreaker"><i
+                        class="fa-solid fa-bars"></i></button>
+                <ul class="navbar-menu hide navBar-content" id="navbar-menu">
+                    <li class="navbar-item"><a href="main.html" class="navbar-link">Home</a></li>
+                    <li class="navbar-item"><a href="aboutus.html" class="navbar-link">About</a></li>
+                    <li class="navbar-item"><a href="programs.html" class="navbar-link">Services</a></li>
+                    <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+                    <li class="navbar-item"><a href="event.html" class="navbar-link">Events</a></li>
+                </ul>
 
-                </nav>
-                <button
-                    class="inline-flex items-center bg-blue-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-700 hover:text-white rounded text-base mt-4 md:mt-0 transition-all duration-300 ease-in-out transform hover:scale-102">JOIN
-                    US
-                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                        stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                    </svg>
-                </button>
             </div>
         </header>
+
         <!--Header section Ended-->
-        <section class="text-gray-600 body-font relative">
+        <section id="invalidClick" class="text-gray-600 body-font relative">
             <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
                 <div
                     class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -99,12 +90,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+                <div id="FormClass"
+                    class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 px-8 mt-8  md:mt-0">
                     <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Join us</h2>
                     <p class="leading-relaxed mb-5 
                      text-gray-600">Fill the form below and be a Member of Soch Pariwartan
                         Nepal</p>
-                    <div class="relative mb-4">
+                    <div class="relative mb-4 ">
                         <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
                         <input type="text" id="name" name="name"
                             class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
@@ -133,21 +125,162 @@
                         <textarea id="message" name="message"
                             class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
                     </div>
-                    <button
-                        class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-                    <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook
-                        viral artisan.</p>
+                    <button id="submit-btn"
+                        class=" text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Submit</button>
+                    <p class="text-xs text-gray-500 mt-3">Note: Detail should be valid, our team
+                        will contact you soon
+                        !!</p>
                 </div>
+                <div id="submit-messages" class="hide">
+                    <p id="submit-message" class=" text-3xl text-gray-500 mt-3">Note: Detail should be valid, our
+                        team
+                        will contact you soon
+                        !!
+
+                    </p>
+                </div>
+                <a id="homeNavigator" class="hide" href="index.html"><button
+                        class=" inline-flex items-center bg-blue-500 border-0 py-1 px-3 focus:outline-none hover:bg-green-700 hover:text-white rounded text-base mt-4 md:mt-0 transition-all duration-300 ease-in-out transform hover:scale-102 ">Home</button></a>
+
             </div>
         </section>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <!--Footer Section-->
+        <footer class="text-gray-600 body-font mt-5 " style="background-color:  #fc6f03; color: white;">
+            <div class="container px-5 mx-auto">
+                <div class="flex flex-wrap  md:text-left text-center order-first">
+                    <div class="lg:w-1/3 md:w-1/2   w-full px-4">
+                        <a href="PROGRAMS.HTML">
+                            <h2
+                                class="title-font underline-on-hover scale-up-on-hover font-bold text-underline  hover:underline text-white tracking-widest text-sm mb-3">
+                                PROGRAMS</h2>
+                        </a>
+                        <nav class="list-none  mb-10 ">
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black  hover:underline  text-lg">Awarness
+                                    Program</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black hover:underline  text-lg">Blood Donation
+                                    Program</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black hover:underline  text-lg">Deusi Bhailo
+                                    Program</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black hover:underline  text-lg">Justice For
+                                    Program</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black hover:underline  text-lg">Help Children
+                                    Program</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="lg:w-1/3 md:w-1/2  w-full px-4">
+                        <a href="PROGRAMS.HTML">
+                            <h2
+                                class="title-font underline-on-hover scale-up-on-hover font-bold text-underline  hover:underline text-white tracking-widest text-sm mb-3">
+                                MEMBERS</h2>
+                        </a>
+                        <nav class="list-none mb-10 ">
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black  hover:underline  text-lg">Administration</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black hover:underline  text-lg">Executive Head</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black  hover:underline  text-lg">Program Manager</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black  hover:underline  text-lg">Others</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="lg:w-1/3 md:w-1/2  w-full px-4">
+                        <a href="PROGRAMS.HTML">
+                            <h2
+                                class="title-font underline-on-hover scale-up-on-hover font-bold text-underline  hover:underline text-white tracking-widest text-sm mb-3">
+                                Let Us Help You !</h2>
+                        </a>
+                        <nav class="list-none mb-10 ">
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black hover:underline  text-lg">Want To Study</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black hover:underline  text-lg">Want Abroad
+                                    Study</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black hover:underline  text-lg">Want To Donate</a>
+                            </li>
+                            <li>
+                                <a href="PROGRAMS.HTML" class="text-black hover:underline  text-lg">Want To Be Part Of
+                                    SPN</a>
+                            </li>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-100">
+                <div class="container  mx-auto flex items-center sm:flex-row flex-col">
+                    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                        <img src="image/logo-fotor-20231125235651-removebg-preview.png" fill="none"
+                            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-9 h-9 text-white p-2 bg-white rounded-full" viewBox="0 0 24 24" alt="Logo">
+                        <span class="ml-3 text-xl">SPN</span>
+                    </a>
+                    <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2023 SPN
+                        <a href="https://www.facebook.com/profile.php?id=100092280244159" rel="noopener noreferrer"
+                            class="text-gray-600 ml-1" target="_blank">@samratthapa</a>
+                    </p>
+                    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+                        <a href="main.html" class="text-gray-500">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="main.html" class="ml-3 text-gray-500">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="main.html" class="ml-3 text-gray-500">
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                            </svg>
+                        </a>
+                        <a href="main.html" class="ml-3 text-gray-500">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path stroke="none"
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                </path>
+                                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                            </svg>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://use.fontawesome.com/03f8a0ebd4.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-        <script src="main.js"></script>
-        <script src="language.js"></script>
+    <script src="main.js"></script>
+    <script src="language.js"></script>
+    <script src="./loader/practise.js"></script>
 </body>
 
 </html>
